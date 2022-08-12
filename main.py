@@ -1,11 +1,12 @@
 from api_class import Ozon
 from config import client_id, api_key
 
+
 def get_ids(func):
     """ Получает id доступных акций """
     action_ids = []
-    for ids in func:
-        action_ids.append(ids['id'])
+    for ids_ in func:
+        action_ids.append(ids_['id'])
     return action_ids
 
 
@@ -22,7 +23,6 @@ if __name__ == "__main__":
             fake_action_products['products'].append(
                 {'product_id': candidates['id'], 'action_price': candidates['max_action_price']}
             )
-            # print(fake_action_products)
             action_products.append(fake_action_products)
 
             for a in action_products:

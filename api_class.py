@@ -56,7 +56,6 @@ class Ozon:
         self.logger.info(response.json())
         return response.json()
 
-
     def activate_action(self, get_candidates):
         '''Добавить товары в акции подходящие под условия '''
         response = requests.post(f'{URL_ACTIONS}/products/activate', headers=self.get_headers(),
